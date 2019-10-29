@@ -79,15 +79,18 @@
 
 
 
-<meta name="description" content="Jyn的技术博客">
+<meta name="description" content="1.创建一个新对象，同时继承对象类的原型。，即Person.prototype 2.执行对象类的构造函数，同时该实例的属性和方法被this所引用，即this指向新构造的实例 3.如果构造函数return了一个新的’对象’，那么这个对象就会取代整个new出来的结果。如果构造函数没有return对象，那么就会返回步骤1所创建的对象，即隐式返回this。（一般情况下构造函数不会返回任何值）  Code">
 <meta name="keywords" content="JavaScript, Vue, Front-End">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jyn">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="new和instanceof的内部机制">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;25&#x2F;new%E5%92%8Cinstanceof%E7%9A%84%E5%86%85%E9%83%A8%E6%9C%BA%E5%88%B6&#x2F;index.html">
 <meta property="og:site_name" content="Jyn">
-<meta property="og:description" content="Jyn的技术博客">
+<meta property="og:description" content="1.创建一个新对象，同时继承对象类的原型。，即Person.prototype 2.执行对象类的构造函数，同时该实例的属性和方法被this所引用，即this指向新构造的实例 3.如果构造函数return了一个新的’对象’，那么这个对象就会取代整个new出来的结果。如果构造函数没有return对象，那么就会返回步骤1所创建的对象，即隐式返回this。（一般情况下构造函数不会返回任何值）  Code">
 <meta property="og:locale" content="cn">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;function-prototype.jpg">
+<meta property="og:updated_time" content="2019-10-28T07:52:47.623Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;function-prototype.jpg">
 
 
 
@@ -117,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/10/25/new和instanceof的内部机制/"/>
 
 
 
 
 
-  <title>Jyn</title>
+  <title>new和instanceof的内部机制 | Jyn</title>
   
 
 
@@ -142,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -226,9 +228,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -258,9 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/25/new%E5%92%8Cinstanceof%E7%9A%84%E5%86%85%E9%83%A8%E6%9C%BA%E5%88%B6/" itemprop="url">new和instanceof的内部机制</a></h1>
+          <h1 class="post-title" itemprop="name headline">new和instanceof的内部机制</h1>
         
 
         <div class="post-meta">
@@ -310,9 +310,7 @@
       
 
       
-        
-          
-            <blockquote>
+        <blockquote>
 <p>1.创建一个新对象，同时继承对象类的原型。，即<code>Person.prototype</code></p>
 <p>2.执行对象类的构造函数，同时该实例的属性和方法被<code>this</code>所引用，即<code>this</code>指向新构造的实例</p>
 <p>3.如果构造函数<code>return</code>了一个新的’对象’，那么这个对象就会取代整个new出来的结果。如果构造函数没有<code>return</code>对象，那么就会返回步骤1所创建的对象，即隐式返回this。（一般情况下构造函数不会返回任何值）</p>
@@ -356,8 +354,6 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>()</span><br><span class="line"><span class="number">0.</span>__proto__ = Foo.prototype</span><br><span class="line">Foo.call(o)</span><br></pre></td></tr></table></figure>
 
 
-          
-        
       
     </div>
     
@@ -374,139 +370,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/25/Event%20loop%20%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jyn">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jyn">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/25/Event%20loop%20%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/" itemprop="url">Event loop 事件循环</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-25T13:43:35+08:00">
-                2019-10-25
-              </time>
+              <a href="/2019/10/25/Event%20loop%20%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/" rel="next" title="Event loop 事件循环">
+                <i class="fa fa-chevron-left"></i> Event loop 事件循环
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><code>Event loop</code>即事件循环，是指浏览器或Node的一种<code>javascript</code>单线程运行时不会阻塞的一种机制，也就是我们经常使用到的<strong>异步</strong>原理</p>
-<h2 id="Event-Loop"><a href="#Event-Loop" class="headerlink" title="Event Loop"></a>Event Loop</h2><p>在<code>Javascipt</code>中，任务被分为两种，一种宏任务（<code>MacroTask</code>）也叫<code>Task</code>。一种叫微任务（<code>MicroTask</code>）</p>
-<h3 id="MacroTask（宏任务）"><a href="#MacroTask（宏任务）" class="headerlink" title="MacroTask（宏任务）"></a><code>MacroTask</code>（宏任务）</h3><ul>
-<li><code>script</code>全部代码，<code>setTimeout</code>, <code>setInterval</code>, <code>setImmediate</code>(浏览器暂不支持，只有IE10支持)，<code>IO</code>, <code>UI Rending</code></li>
-</ul>
-<h3 id="MicroTask（微任务）"><a href="#MicroTask（微任务）" class="headerlink" title="MicroTask（微任务）"></a><code>MicroTask</code>（微任务）</h3><ul>
-<li><code>Process.nextTick</code>(Node独有), <code>Promise</code>, <code>Object.observe(废弃)</code>, <code>MutationObserver</code></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -516,10 +401,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -527,6 +413,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -730,6 +620,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

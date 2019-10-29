@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="cn">
+<html class="theme-next pisces use-motion" lang="cn">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -79,12 +79,13 @@
 
 
 
-<meta name="description" content="描述">
+<meta name="description" content="Jyn的技术博客">
+<meta name="keywords" content="JavaScript, Vue, Front-End">
 <meta property="og:type" content="website">
-<meta property="og:title" content="标题">
+<meta property="og:title" content="Jyn">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;index.html">
-<meta property="og:site_name" content="标题">
-<meta property="og:description" content="描述">
+<meta property="og:site_name" content="Jyn">
+<meta property="og:description" content="Jyn的技术博客">
 <meta property="og:locale" content="cn">
 <meta name="twitter:card" content="summary">
 
@@ -94,7 +95,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -122,7 +123,7 @@
 
 
 
-  <title>Archive | 标题</title>
+  <title>Archive | Jyn</title>
   
 
 
@@ -152,12 +153,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">标题</span>
+        <span class="site-title">Jyn</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">副标题</p>
+        <p class="site-subtitle">Jyn的博客</p>
       
   </div>
 
@@ -187,12 +188,22 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/%20" rel="section">
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Archives
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
           </a>
         </li>
       
@@ -252,9 +263,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2019/10/25/A-new-blog-test/" itemprop="url">
+            <a class="post-title-link" href="/2019/10/25/new%E5%92%8Cinstanceof%E7%9A%84%E5%86%85%E9%83%A8%E6%9C%BA%E5%88%B6/" itemprop="url">
               
-                <span itemprop="name">A new blog test</span>
+                <span itemprop="name">new和instanceof的内部机制</span>
               
             </a>
         
@@ -262,7 +273,7 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2019-10-25T10:01:57+08:00"
+              datetime="2019-10-25T13:43:42+08:00"
               content="2019-10-25" >
           10-25
         </time>
@@ -289,9 +300,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2019/10/25/hello-world/" itemprop="url">
+            <a class="post-title-link" href="/2019/10/25/Event%20loop%20%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/" itemprop="url">
               
-                <span itemprop="name">Hello World</span>
+                <span itemprop="name">Event loop 事件循环</span>
               
             </a>
         
@@ -299,7 +310,7 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2019-10-25T09:38:40+08:00"
+              datetime="2019-10-25T13:43:35+08:00"
               content="2019-10-25" >
           10-25
         </time>
@@ -353,7 +364,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Jyn</p>
-              <p class="site-description motion-element" itemprop="description">描述</p>
+              <p class="site-description motion-element" itemprop="description">Jyn的技术博客</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -361,7 +372,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%20%7C%7C%20archive">
+                <a href="/archives">
               
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
@@ -422,7 +433,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -469,8 +480,6 @@
   
 
 
-  
-
 
 
 
@@ -511,11 +520,6 @@
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
 
   
 
@@ -528,6 +532,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
 
