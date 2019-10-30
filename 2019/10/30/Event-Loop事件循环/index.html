@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="cn">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="前言Event loop即事件循环，是指浏览器或Node的一种javascript单线程运行时不会阻塞的一种机制，也就是我们经常使用到的异步原理 Event Loop在Javascipt中，任务被分为两种，一种宏任务（MacroTask）也叫Task。一种叫微任务（MicroTask） MacroTask（宏任务） script全部代码，setTimeout, setInterval, setIm">
-<meta name="keywords" content="JavaScript, Vue, Front-End">
+<meta name="description" content="关于Event Loop事件循环 —— JavaScript的执行机制前言Event loop即事件循环，是指浏览器或Node的一种javascript单线程运行时不会阻塞的一种机制，也就是我们经常使用到的异步原理 Event Loop在Javascipt中，任务被分为两种，一种宏任务（MacroTask）也叫Task。一种叫微任务（MicroTask） MacroTask（宏任务） script">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Event loop 事件循环">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;25&#x2F;Event%20loop%20%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF&#x2F;index.html">
+<meta property="og:title" content="Event Loop事件循环">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;30&#x2F;Event-Loop%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF&#x2F;index.html">
 <meta property="og:site_name" content="Jyn">
-<meta property="og:description" content="前言Event loop即事件循环，是指浏览器或Node的一种javascript单线程运行时不会阻塞的一种机制，也就是我们经常使用到的异步原理 Event Loop在Javascipt中，任务被分为两种，一种宏任务（MacroTask）也叫Task。一种叫微任务（MicroTask） MacroTask（宏任务） script全部代码，setTimeout, setInterval, setIm">
-<meta property="og:locale" content="cn">
-<meta property="og:updated_time" content="2019-05-05T06:32:56.904Z">
+<meta property="og:description" content="关于Event Loop事件循环 —— JavaScript的执行机制前言Event loop即事件循环，是指浏览器或Node的一种javascript单线程运行时不会阻塞的一种机制，也就是我们经常使用到的异步原理 Event Loop在Javascipt中，任务被分为两种，一种宏任务（MacroTask）也叫Task。一种叫微任务（MicroTask） MacroTask（宏任务） script">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-30T06:45:23.492Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -98,13 +98,13 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/10/25/Event loop 事件循环/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/10/30/Event-Loop事件循环/"/>
 
 
 
 
 
-  <title>Event loop 事件循环 | Jyn</title>
+  <title>Event Loop事件循环 | Jyn</title>
   
 
 
@@ -136,7 +136,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="cn">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -184,7 +184,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            首页
           </a>
         </li>
       
@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -204,7 +204,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Categories
+            分类
           </a>
         </li>
       
@@ -241,12 +241,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/25/Event%20loop%20%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/30/Event-Loop%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jyn">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -258,7 +258,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Event loop 事件循环</h1>
+          <h1 class="post-title" itemprop="name headline">Event Loop事件循环</h1>
         
 
         <div class="post-meta">
@@ -268,10 +268,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-25T13:43:35+08:00">
-                2019-10-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-30T14:42:48+08:00">
+                2019-10-30
               </time>
             
 
@@ -281,6 +281,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/Front-End/" itemprop="url" rel="index">
+                    <span itemprop="name">Front-End</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -291,6 +324,37 @@
 
           
 
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
           
 
           
@@ -308,7 +372,7 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><code>Event loop</code>即事件循环，是指浏览器或Node的一种<code>javascript</code>单线程运行时不会阻塞的一种机制，也就是我们经常使用到的<strong>异步</strong>原理</p>
+        <h1 id="关于Event-Loop事件循环-——-JavaScript的执行机制"><a href="#关于Event-Loop事件循环-——-JavaScript的执行机制" class="headerlink" title="关于Event Loop事件循环 —— JavaScript的执行机制"></a>关于<code>Event Loop</code>事件循环 —— <code>JavaScript</code>的执行机制</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><code>Event loop</code>即事件循环，是指浏览器或Node的一种<code>javascript</code>单线程运行时不会阻塞的一种机制，也就是我们经常使用到的<strong>异步</strong>原理</p>
 <h2 id="Event-Loop"><a href="#Event-Loop" class="headerlink" title="Event Loop"></a>Event Loop</h2><p>在<code>Javascipt</code>中，任务被分为两种，一种宏任务（<code>MacroTask</code>）也叫<code>Task</code>。一种叫微任务（<code>MicroTask</code>）</p>
 <h3 id="MacroTask（宏任务）"><a href="#MacroTask（宏任务）" class="headerlink" title="MacroTask（宏任务）"></a><code>MacroTask</code>（宏任务）</h3><ul>
 <li><code>script</code>全部代码，<code>setTimeout</code>, <code>setInterval</code>, <code>setImmediate</code>(浏览器暂不支持，只有IE10支持)，<code>IO</code>, <code>UI Rending</code></li>
@@ -331,6 +395,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
 
       
       
@@ -346,7 +416,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/10/25/new%E5%92%8Cinstanceof%E7%9A%84%E5%86%85%E9%83%A8%E6%9C%BA%E5%88%B6/" rel="prev" title="new和instanceof的内部机制">
+              <a href="/2019/10/30/new%E5%92%8Cinstanceof%E7%9A%84%E5%86%85%E9%83%A8%E6%9C%BA%E5%88%B6/" rel="prev" title="new和instanceof的内部机制">
                 new和instanceof的内部机制 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -402,10 +472,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            站点概览
           </li>
         </ul>
       
@@ -413,6 +483,10 @@
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Jyn" />
             
               <p class="site-author-name" itemprop="name">Jyn</p>
               <p class="site-description motion-element" itemprop="description">Jyn的技术博客</p>
@@ -426,13 +500,31 @@
                 <a href="/archives">
               
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -462,7 +554,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Event-Loop"><span class="nav-number">2.</span> <span class="nav-text">Event Loop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MacroTask（宏任务）"><span class="nav-number">2.1.</span> <span class="nav-text">MacroTask（宏任务）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MicroTask（微任务）"><span class="nav-number">2.2.</span> <span class="nav-text">MicroTask（微任务）</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于Event-Loop事件循环-——-JavaScript的执行机制"><span class="nav-number">1.</span> <span class="nav-text">关于Event Loop事件循环 —— JavaScript的执行机制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Event-Loop"><span class="nav-number">1.2.</span> <span class="nav-text">Event Loop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MacroTask（宏任务）"><span class="nav-number">1.2.1.</span> <span class="nav-text">MacroTask（宏任务）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MicroTask（微任务）"><span class="nav-number">1.2.2.</span> <span class="nav-text">MicroTask（微任务）</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -489,10 +581,19 @@
   <span class="author" itemprop="copyrightHolder">Jyn</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -500,7 +601,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -520,6 +621,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
